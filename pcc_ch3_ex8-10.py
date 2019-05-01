@@ -1,57 +1,72 @@
+#Exercise 3-8 which focuses on sorting lists for the first time.
+seeingTheWorld = ['ireland', 'england', 'japan', 'france', 'israel']
+print(seeingTheWorld)
+print()
+print(sorted(seeingTheWorld))
+print()
+print(seeingTheWorld)
+
+print()
+seeingTheWorld.reverse()
+print(seeingTheWorld)
+print()
+seeingTheWorld.reverse()
+print(seeingTheWorld)
+print()
+
+seeingTheWorld.sort()
+print(seeingTheWorld)
+
+print()
+seeingTheWorld.sort(reverse=True)
+print(seeingTheWorld)
+
+#Exercise 3-9 which focuses on measuring the length (len) of lists from previous exercise
+print()
 dinnerGuests = ['Bob the Builder', 'J.R. Tolkein', 'John']
-message = "I would be honored if you would join me for dinner, "
-
-print (message + dinnerGuests[0])
-print (message + dinnerGuests[1])
-print (message + dinnerGuests[2])
-
-#print (message + dinnerGuests)
-
-print (message, *dinnerGuests, sep=', ')
+#len(dinnerGuests) - This didn't work since I am not actually working in python
+print(len(dinnerGuests))
 print()
-#dinnerGuestsPopped = dinnerGuests.pop(1)
-print ('Unfortunately, it looks like ' + dinnerGuests.pop(1) +' will not be able to make it.')
+
+#Exercise 3-10 - Create a master list and use every function from this chapter on it
+
+statesAmerica = ["Alabama","Alaska","Arizona","Arkansas","California","Colorado",
+  "Connecticut","Delaware","Florida","Georgia","Hawaii","Idaho","Illinois",
+  "Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Maryland",
+  "Massachusetts","Michigan","Minnesota","Mississippi","Missouri","Montana",
+  "Nebraska","Nevada","New Hampshire","New Jersey","New Mexico","New York",
+  "North Carolina","North Dakota","Ohio","Oklahoma","Oregon","Pennsylvania",
+  "Rhode Island","South Carolina","South Dakota","Tennessee","Texas","Utah",
+  "Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming"]
+print(statesAmerica)
+
 print()
-dinnerGuests.insert(1, 'C.S. Lewis')
+print(statesAmerica[3].title())
 print()
-print (message + dinnerGuests[0])
-print (message + dinnerGuests[1])
-print (message + dinnerGuests[2])
 
-
-
-#Found a larger table so we are inviting more people
+statesAmerica[-1] = 'Britain'
+print(statesAmerica)
 print()
-print('Good news folks, we have a larger table!')
-dinnerGuests.insert(0, 'Davy Crocket')
-dinnerGuests.insert(2, 'Napoleon')
-dinnerGuests.append('Pope Francis')
 
-#Need to re-invite everyone to dinner
+statesAmerica.append('Paris')
+print(statesAmerica[-1])
 print()
-print (message + dinnerGuests[0])
-print (message + dinnerGuests[1])
-print (message + dinnerGuests[2])
-print (message + dinnerGuests[3])
-print (message + dinnerGuests[4])
-print (message + dinnerGuests[5])
+
+statesAmerica.insert(0, 'South Michigan')
+print(statesAmerica[0])
 print()
-print (message, *dinnerGuests, sep=', ')
 
-
-
-#Looks like the table won't arrive in time for dinner. Tryouts! 
+print('Unfortunately, it looks as if ' + statesAmerica.pop(2) + ' is no longer a state...')
 print()
-print('Looks like the table will only fit two of you, time to battle to the death...')
-print('Sorry, ' + dinnerGuests.pop(2) + ' it appears that you have died')
-print('Sorry, ' + dinnerGuests.pop(4) + ' it appears that you have died')
-print('Sorry, ' + dinnerGuests.pop(0) + ' it appears that you have died')
-print('Sorry, ' + dinnerGuests.pop(1) + ' it appears that you have died')
-
-#two survived
+print(statesAmerica)
 print()
-print('Some good news for you two though, ', dinnerGuests[0], ' and', dinnerGuests[1], ' have survived. You are welcome to join me for dinner!')
 
+statesAmerica.remove('Paris')
+print()
 
-del dinnerGuests[0:2]
-print(dinnerGuests)
+statesAmerica.sort()
+print(statesAmerica[-1])
+print()
+
+statesAmerica.reverse()
+print(statesAmerica)
